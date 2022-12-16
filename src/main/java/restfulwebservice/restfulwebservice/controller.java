@@ -7,30 +7,37 @@ package restfulwebservice.restfulwebservice;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 /**
  *
- * @author M.Barik Addarukutni
+ * @author belinda merlansyah
  */
 @RestController
 public class controller {
-     private static Map<String, Product> productRepo = new HashMap<>();
+    private static Map<String, Product> productRepo = new HashMap<>();
     static {
         Product honey = new Product();
         honey.setId("1");
         honey.setName("Honey");
+        honey.setPrice(200000);
+        honey.setNumber(2);
+        honey.setTotal();
         productRepo.put(honey.getId(), honey);
         
         Product almond = new Product();
         almond.setId("2");
         almond.setName("Almond");
+        almond.setPrice(200000);
+        almond.setNumber(3);
+        almond.setTotal();
         productRepo.put(almond.getId(), almond);
     }
     
